@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int suma = 0;
+        int sumad = 0;
+        int sumat = 0;
+        int [][] sumValues = new int[3][3];
+        Scanner scanner = new Scanner(System.in);
+
+        for(int i=0;i<sumValues.length;i++){
+
+            for(int j=0;j<sumValues[i].length;j++) {
+                System.out.println("Podaj liczbe dla komórki: [" + i + "][" + j + "]");
+                sumValues[i][j] = scanner.nextInt();
+                suma += sumValues[0][j];
+                sumad += sumValues[1][j];
+                sumat += sumValues[2][j];
+            }
+        }
+        System.out.println("Suma pierwszej tabeli: "+ suma);
+        System.out.println("Suma drugiej tabeli: "+sumad);
+        System.out.println("Suma trzeciej tabeli: "+ sumat);
+
+
+    }
+}
